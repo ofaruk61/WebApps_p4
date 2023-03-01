@@ -22,6 +22,9 @@
         <nav>
             <a href="index.html" id="logo">NATASHA</a>
             <div class="nav-link" id="navLink">
+                <span class="material-symbols-outlined side" onclick="hideMenu()">
+                    close
+                </span>
                 <ul>
                     <li><a href="#">HOME</a></li>
                     <li><a href="#">GALERY</a></li>
@@ -29,6 +32,9 @@
                     <li><a href="#">CONTACT</a></li>
                 </ul>
             </div>
+            <span class="material-symbols-outlined side" onclick="showMenu()">
+                menu
+            </span>
         </nav>
         <div class="text-box">
             <h1>BLACK WIDOW</h1>
@@ -42,6 +48,14 @@
                     </span> </p>
         </div>
     </section>
+    <script>
+        function hideMenu() {
+            document.getElementById('navLink').style.right = '-175px';
+        }
+        function showMenu() {
+            document.getElementById('navLink').style.right = '0';
+        }
+    </script>
 </body>
 
 </html>

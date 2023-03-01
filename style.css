@@ -50,6 +50,9 @@ nav {
     width: 100%;
     transition: 0.5s;
 }
+nav .side{
+    display: none;
+}
 .text-box {
     width: 90%;
     position: absolute;
@@ -68,17 +71,59 @@ nav {
     text-align: center;
     color:  #554444;
 }
-
 .text-box h1 {
     font-size: 60px;
 }
-
 .text-box p {
     font-size: 20px;
     margin: 10px 0 40px;
 }
-
-
+@media (max-width: 768px) {
+    .text-box h1{
+        font-size: 30px;
+    }
+    #logo{
+        font-size: 28px;
+        margin: 16px;
+    }
+    nav .side{
+        display: block;
+        color: #fff;
+        font-size: 22px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .nav-link{
+        position: absolute;
+        background: rgba(184, 81, 81, 0.3);
+        height: 100vh;
+        width: 175px;
+        top: 0;
+        right : -175px;
+        text-align: left;
+        z-index: 2;
+        transition: .8s;
+    }
+    .nav-link ul li {
+        display: block;
+        margin: 20px;
+    }
+    .nav-link ul{
+        padding: 20px;
+    }
+    .nav-link ul li::after {
+        content: "";
+        width: 0%;
+        height: 2px;
+        background: #f44336;
+        display: block;
+        margin: auto;
+    }
+    .nav-link ul li:hover::after {
+        width: 100%;
+        transition: 0.5s;
+    }
+}
 
 
 
